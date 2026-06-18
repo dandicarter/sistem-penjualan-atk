@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistem Penjualan Alat Tulis Sekolah</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="topbar">
+    Sistem Penjualan Alat Tulis Sekolah | OOP Project
+</div>
+
+<header>
+    <h1>Sistem Penjualan Alat Tulis Sekolah Berbasis Website</h1>
+    <p>Proyek Pembelajaran Object Oriented Programming (OOP)</p>
+</header>
+
+<nav>
+    <a href="#deskripsi">Deskripsi</a>
+    <a href="#diagram">Diagram</a>
+    <a href="#oop">OOP</a>
+    <a href="#source">Source Code</a>
+    <a href="#simulasi">Simulasi</a>
+    <a href="#anggota">Kelompok</a>
+</nav>
+
+<section id="deskripsi">
+<h2>Deskripsi Sistem</h2>
+
+<p>
+Sistem Penjualan Alat Tulis Sekolah Berbasis Website merupakan sistem yang
+dirancang untuk membantu proses penjualan alat tulis secara digital.
+Sistem memungkinkan admin mengelola produk, memantau stok barang,
+mengelola transaksi, serta menghasilkan laporan penjualan secara efektif.
+</p>
+
+</section>
+
+<section id="diagram">
+
+<h2>Diagram Class</h2>
+
+<pre>
+                 User
+                   │
+      ┌────────────┴────────────┐
+      │                         │
+    Admin                  Pelanggan
+      │                         │
+      └──────────┬──────────────┘
+                 │
+               Produk
+                 │
+             Transaksi
+                 │
+            Pembayaran
+                 │
+       ┌─────────┴─────────┐
+       │                   │
+ TransferBank         E-Wallet
+</pre>
+
+</section>
+
+<section id="oop">
+
+<h2>Konsep OOP</h2>
+
+<h3>Class & Object</h3>
+<p>
+User, Admin, Pelanggan, Produk, Transaksi, dan Pembayaran.
+</p>
+
+<h3>Inheritance</h3>
+<p>
+Admin dan Pelanggan merupakan turunan dari User.
+</p>
+
+<h3>Encapsulation</h3>
+<p>
+Data produk seperti harga dan stok dikelola melalui class Produk.
+</p>
+
+<h3>Polymorphism</h3>
+<p>
+Method pembayaran dapat berbeda implementasi pada TransferBank dan EWallet.
+</p>
+
+</section>
+
+<<section id="source">
+
+<h2>Source Code Sistem</h2>
+
+<div class="card">
+<h3>user.dart</h3>
+<p>Class induk pengguna sistem.</p>
+
+<button class="view-btn" onclick="viewCode('user')">📄 Lihat Source Code</button>
+<button class="run-btn" onclick="runCode('user')">▶ Run Code</button>
+
+<pre id="code-user" class="source-view"></pre>
+<div id="user" class="output-console"></div>
+</div>
+
+
+<div class="card">
+<h3>admin.dart</h3>
+<p>Class admin turunan dari User.</p>
+
+<button class="view-btn" onclick="viewCode('admin')">📄 Lihat Source Code</button>
+<button class="run-btn" onclick="runCode('admin')">▶ Run Code</button>
+
+<pre id="code-admin" class="source-view"></pre>
+<div id="admin" class="output-console"></div>
+</div>
+
+
+<div class="card">
+<h3>pelanggan.dart</h3>
+<p>Class pelanggan turunan dari User.</p>
+
+<button class="view-btn" onclick="viewCode('pelanggan')">📄 Lihat Source Code</button>
+<button class="run-btn" onclick="runCode('pelanggan')">▶ Run Code</button>
+
+<pre id="code-pelanggan" class="source-view"></pre>
+<div id="pelanggan" class="output-console"></div>
+</div>
+
+
+<div class="card">
+<h3>produk.dart</h3>
+<p>Class data produk alat tulis.</p>
+
+<button class="view-btn" onclick="viewCode('produk')">📄 Lihat Source Code</button>
+<button class="run-btn" onclick="runCode('produk')">▶ Run Code</button>
+
+<pre id="code-produk" class="source-view"></pre>
+<div id="produk" class="output-console"></div>
+</div>
+
+
+<div class="card">
+<h3>keranjang.dart</h3>
+<p>Class keranjang pembelian.</p>
+
+<button class="view-btn" onclick="viewCode('keranjang')">📄 Lihat Source Code</button>
+<button class="run-btn" onclick="runCode('keranjang')">▶ Run Code</button>
+
+<pre id="code-keranjang" class="source-view"></pre>
+<div id="keranjang" class="output-console"></div>
+</div>
+
+
+<div class="card">
+<h3>transaksi.dart</h3>
+<p>Class transaksi penjualan.</p>
+
+<button class="view-btn" onclick="viewCode('transaksi')">📄 Lihat Source Code</button>
+<button class="run-btn" onclick="runCode('transaksi')">▶ Run Code</button>
+
+<pre id="code-transaksi" class="source-view"></pre>
+<div id="transaksi" class="output-console"></div>
+</div>
+
+
+<div class="card">
+<h3>pembayaran.dart</h3>
+<p>Penerapan polymorphism pembayaran.</p>
+
+<button class="view-btn" onclick="viewCode('pembayaran')">📄 Lihat Source Code</button>
+<button class="run-btn" onclick="runCode('pembayaran')">▶ Run Code</button>
+
+<pre id="code-pembayaran" class="source-view"></pre>
+<div id="pembayaran" class="output-console"></div>
+</div>
+
+
+<div class="card">
+<h3>struk.dart</h3>
+<p>Class pencetakan struk.</p>
+
+<button class="view-btn" onclick="viewCode('struk')">📄 Lihat Source Code</button>
+<button class="run-btn" onclick="runCode('struk')">▶ Run Code</button>
+
+<pre id="code-struk" class="source-view"></pre>
+<div id="struk" class="output-console"></div>
+</div>
+
+
+<div class="card">
+<h3>main.dart</h3>
+<p>Program utama sistem.</p>
+
+<button class="view-btn" onclick="viewCode('main')">📄 Lihat Source Code</button>
+<button class="run-btn" onclick="runCode('main')">▶ Run Code</button>
+
+<pre id="code-main" class="source-view"></pre>
+<div id="main" class="output-console"></div>
+</div>
+
+</section>
+<section id="simulasi">
+
+<h2>Output Simulasi Program</h2>
+
+<pre>
+======================================
+ SISTEM PENJUALAN ALAT TULIS SEKOLAH
+======================================
+
+👨‍💼 Admin Login
+
+📦 Produk Ditambahkan:
+- Buku Tulis
+- Pulpen
+- Pensil
+- Penghapus
+
+👤 Pelanggan Login
+
+🛒 Produk Dibeli:
+- Buku Tulis
+- Pulpen
+
+💰 Total Pembayaran : Rp15.000
+
+📱 Pembayaran Berhasil
+
+🧾 Struk Dicetak
+
+✅ Transaksi Selesai
+</pre>
+
+</section>
+
+<section id="anggota">
+
+<h2>Pengembang Sistem</h2>
+
+<ul>
+<li>Dandi Carter</li>
+</ul>
+
+</section>
+
+<footer>
+<p>© 2026 Sistem Penjualan Alat Tulis Sekolah Berbasis Website</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
