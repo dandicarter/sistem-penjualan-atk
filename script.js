@@ -1,12 +1,12 @@
 // ===============================
 // MENAMPILKAN SOURCE CODE
 // ===============================
-function viewCode(file){
+function viewCode(file) {
 
 fetch(file + ".txt")
 .then(response => {
 
-if(!response.ok){
+if (!response.ok) {
 throw new Error("File tidak ditemukan");
 }
 
@@ -17,10 +17,10 @@ return response.text();
 
 let box = document.getElementById("code-" + file);
 
-if(box.style.display == "block"){
+if (box.style.display == "block") {
 box.style.display = "none";
 }
-else{
+else {
 box.style.display = "block";
 box.textContent = data;
 }
@@ -28,7 +28,7 @@ box.textContent = data;
 })
 .catch(error => {
 
-alert("Gagal membuka source code!\n\n" + error);
+alert("Gagal membuka source code!\n\n" + error.message);
 
 });
 
@@ -38,11 +38,11 @@ alert("Gagal membuka source code!\n\n" + error);
 // ===============================
 // MENJALANKAN SIMULASI OUTPUT
 // ===============================
-function runCode(file){
+function runCode(file) {
 
 let output = "";
 
-switch(file){
+switch (file) {
 
 case "user":
 output = `=== CLASS USER ===
@@ -101,7 +101,7 @@ break;
 
 case "main":
 output = `======================================
- SISTEM PENJUALAN ALAT TULIS SEKOLAH
+SISTEM PENJUALAN ALAT TULIS SEKOLAH
 ======================================
 
 Admin Login
