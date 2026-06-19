@@ -3,8 +3,6 @@
 // ===============================
 function viewCode(file){
 
-function viewCode(file){
-
 fetch(file + ".txt")
 .then(response => {
 
@@ -19,8 +17,13 @@ return response.text();
 
 let box = document.getElementById("code-" + file);
 
+if(box.style.display == "block"){
+box.style.display = "none";
+}
+else{
 box.style.display = "block";
 box.textContent = data;
+}
 
 })
 .catch(error => {
@@ -30,6 +33,7 @@ alert("Gagal membuka source code!\n\n" + error);
 });
 
 }
+
 
 // ===============================
 // MENJALANKAN SIMULASI OUTPUT
@@ -41,79 +45,62 @@ let output = "";
 switch(file){
 
 case "user":
-output =
-`=== CLASS USER ===
+output = `=== CLASS USER ===
 
 Nama : Dandi Carter
 Status : User berhasil dibuat`;
 break;
 
-
 case "admin":
-output =
-`=== CLASS ADMIN ===
+output = `=== CLASS ADMIN ===
 
 Admin berhasil dibuat
 Nama : Dandi Carter`;
 break;
 
-
 case "pelanggan":
-output =
-`=== CLASS PELANGGAN ===
+output = `=== CLASS PELANGGAN ===
 
 Nama : Budi
 Alamat : Palembang`;
 break;
 
-
 case "produk":
-output =
-`=== CLASS PRODUK ===
+output = `=== CLASS PRODUK ===
 
 Produk : Buku Tulis
 Harga : Rp5000
 Stok : 50`;
 break;
 
-
 case "keranjang":
-output =
-`=== CLASS KERANJANG ===
+output = `=== CLASS KERANJANG ===
 
 Buku Tulis x3
 Total : Rp15000`;
 break;
 
-
 case "transaksi":
-output =
-`=== CLASS TRANSAKSI ===
+output = `=== CLASS TRANSAKSI ===
 
 ID : TRX001
 Total Bayar : Rp15000`;
 break;
 
-
 case "pembayaran":
-output =
-`=== CLASS PEMBAYARAN ===
+output = `=== CLASS PEMBAYARAN ===
 
 Pembayaran melalui Transfer Bank`;
 break;
 
-
 case "struk":
-output =
-`=== CLASS STRUK ===
+output = `=== CLASS STRUK ===
 
 Struk berhasil dicetak`;
 break;
 
-
 case "main":
-output =
-`======================================
+output = `======================================
  SISTEM PENJUALAN ALAT TULIS SEKOLAH
 ======================================
 
@@ -127,7 +114,6 @@ TRANSAKSI SELESAI`;
 break;
 
 }
-
 
 let consoleBox = document.getElementById(file);
 
