@@ -99,17 +99,40 @@ Struk berhasil dicetak`;
 break;
 
 case "main":
-output = `======================================
+output = `
+======================================
 SISTEM PENJUALAN ALAT TULIS SEKOLAH
 ======================================
 
-Admin Login
-Produk Ditambahkan
-Pelanggan Login
-Pembayaran Berhasil
-Struk Dicetak
+=== DATA ADMIN ===
+ID Admin : A001
+Nama Admin : Dandi Carter
 
-TRANSAKSI SELESAI`;
+=== JUMLAH PRODUK ===
+10 Produk tersedia
+
+=== JUMLAH PELANGGAN ===
+10 Pelanggan terdaftar
+
+=== TRANSAKSI ===
+TRX001 berhasil
+TRX002 berhasil
+TRX003 berhasil
+TRX004 berhasil
+TRX005 berhasil
+TRX006 berhasil
+TRX007 berhasil
+TRX008 berhasil
+TRX009 berhasil
+TRX010 berhasil
+
+=== PEMBAYARAN ===
+Pembayaran melalui Transfer Bank
+
+=== STRUK ===
+Struk berhasil dicetak
+
+=== TRANSAKSI SELESAI ===`;
 break;
 
 }
