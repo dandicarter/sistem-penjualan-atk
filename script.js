@@ -3,8 +3,10 @@
 // ===============================
 function viewCode(file){
 
+function viewCode(file){
+
 fetch(file + ".txt")
-.then(function(response){
+.then(response => {
 
 if(!response.ok){
 throw new Error("File tidak ditemukan");
@@ -13,25 +15,21 @@ throw new Error("File tidak ditemukan");
 return response.text();
 
 })
-.then(function(data){
+.then(data => {
 
 let box = document.getElementById("code-" + file);
 
-if(box.style.display=="block"){
-box.style.display="none";
-}
-else{
-box.style.display="block";
-box.textContent=data;
-}
+box.style.display = "block";
+box.textContent = data;
 
 })
-.catch(function(error){
-alert("Gagal membuka source code");
+.catch(error => {
+
+alert("Gagal membuka source code!\n\n" + error);
+
 });
 
 }
-
 
 // ===============================
 // MENJALANKAN SIMULASI OUTPUT
