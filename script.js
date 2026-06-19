@@ -3,7 +3,7 @@
 // ===============================
 function viewCode(file){
 
-fetch("codes/" + file + ".txt")
+fetch(file + ".txt")
 .then(function(response){
 
 if(!response.ok){
@@ -17,19 +17,17 @@ return response.text();
 
 let box = document.getElementById("code-" + file);
 
-if(box.style.display === "block"){
-box.style.display = "none";
+if(box.style.display=="block"){
+box.style.display="none";
 }
 else{
-box.style.display = "block";
-box.textContent = data;
+box.style.display="block";
+box.textContent=data;
 }
 
 })
 .catch(function(error){
-
-alert("Gagal membuka source code!\n\n" + error);
-
+alert("Gagal membuka source code");
 });
 
 }
