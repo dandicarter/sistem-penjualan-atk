@@ -34,7 +34,6 @@ alert("Gagal membuka source code!\n\n" + error.message);
 
 }
 
-
 // ===============================
 // MENJALANKAN SIMULASI OUTPUT
 // ===============================
